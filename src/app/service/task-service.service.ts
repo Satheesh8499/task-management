@@ -2,6 +2,20 @@ import { HttpClient, HttpHeaders ,HttpClientModule} from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, catchError, retry, throwError } from 'rxjs';
 import { Task } from './task';
+import { User } from './user-service.service';
+
+export interface project{
+    projectID: number;
+    projectName: string;
+    projectDescription: string;
+    projectManagerID: number;
+    startDate: string;
+    endDate: string;
+    status: string;
+    tasks: Task[];
+    users?: User[];
+  
+}
 
 @Injectable({
   providedIn: 'root'

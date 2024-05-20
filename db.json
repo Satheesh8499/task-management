@@ -1,73 +1,180 @@
 {
-    "tasks": [
-         {
-          "id": 1,
-          "name": "Task 1",
-          "description": "Complete the project report",
-          "assignedTo": "John Doe",
-          "priority": "High",
-          "status": "To Do",
-          "startDate": "2024-05-01T00:00:00Z",
-          "dueDate": "2024-05-20T00:00:00Z",
-          "completedDate": null
-        },
+  "tasks": [
+    {
+      "id": "1",
+      "name": "Task 1",
+      "description": "Complete the project report",
+      "assignedTo": "John Doe",
+      "priority": "High",
+      "status": "To Do",
+      "startDate": "2024-05-01T00:00:00Z",
+      "dueDate": "2024-05-20T00:00:00Z",
+      "completedDate": null
+    },
+    {
+      "id": "2",
+      "name": "Task 2",
+      "description": "Design the new website layout",
+      "assignedTo": "Jane Smith",
+      "priority": "Medium",
+      "status": "In Progress",
+      "startDate": "2024-05-15T00:00:00Z",
+      "dueDate": "2024-05-25T00:00:00Z",
+      "completedDate": null
+    },
+    {
+      "id": "3",
+      "name": "Task 3",
+      "description": "Test the application for bugs",
+      "assignedTo": "Sam Wilson",
+      "priority": "Low",
+      "status": "Completed",
+      "startDate": "2024-05-10T00:00:00Z",
+      "dueDate": "2024-05-15T00:00:00Z",
+      "completedDate": "2024-05-16T00:00:00Z"
+    },
+    {
+      "id": "4",
+      "name": "Task 4",
+      "description": "Prepare the presentation slides",
+      "assignedTo": "Emily Johnson",
+      "priority": "High",
+      "status": "To Do",
+      "startDate": "2024-05-12T00:00:00Z",
+      "dueDate": "2024-05-22T00:00:00Z",
+      "completedDate": null
+    },
+    {
+      "id": "5",
+      "name": "Task 5",
+      "description": "Organize team meeting",
+      "assignedTo": "Michael Brown",
+      "priority": "Medium",
+      "status": "In Progress",
+      "startDate": "2024-05-18T00:00:00Z",
+      "dueDate": "2024-05-28T00:00:00Z",
+      "completedDate": null
+    }
+  ],
+  "users": [
+    {
+      "id": "10",
+      "name": "Sophia Brown",
+      "email": "sophia.brown@example.com",
+      "contact": "+1122334455",
+      "role": "team-member"
+    },
+    {
+      "id": "12",
+      "name": "Alice White",
+      "email": "alice.white@example.com",
+      "contact": "+9876543210",
+      "role": "admin"
+    },
+    {
+      "id": "13",
+      "name": "John Doe",
+      "email": "john.doe@example.com",
+      "contact": "+1234567890",
+      "role": "project-manager"
+    },
+    {
+      "id": "15",
+      "name": "Michael Brown",
+      "email": "michael.brown@example.com",
+      "contact": "+1987654321",
+      "role": "team-member"
+    },
+    {
+      "id": "16",
+      "name": "Sophia Lee",
+      "email": "sophia.lee@example.com",
+      "contact": "+1234567890",
+      "role": "project-manager"
+    },
+    {
+      "id": "17",
+      "name": "Sophia Lee",
+      "email": "sophia.lee@example.com",
+      "contact": "+1234567890",
+      "role": "project-manager"
+    },
+    {
+      "id": 0,
+      "name": "satheesh",
+      "email": "sugithisatheesh8499@gmail.com",
+      "contact": "6302569010",
+      "role": "project-manager"
+    }
+  ],
+
+  "projects": [
+    {
+      "projectID": 1,
+      "projectName": "Upgrade Company Website",
+      "projectDescription": "Redesign and enhance the company website for better user experience.",
+      "projectManagerID": 101,
+      "startDate": "2024-06-01",
+      "endDate": "2024-09-30",
+      "status": "Active",
+      "tasks": [
         {
-          "id": 2,
-          "name": "Task 2",
-          "description": "Design the new website layout",
-          "assignedTo": "Jane Smith",
-          "priority": "Medium",
+          "taskID": 101,
+          "taskName": "Design Wireframes",
+          "taskDescription": "Create wireframe designs for the new website layout.",
+          "assignedToTeamMemberID": 301,
+          "startDate": "2024-06-01",
+          "endDate": "2024-06-15",
           "status": "In Progress",
-          "startDate": "2024-05-15T00:00:00Z",
-          "dueDate": "2024-05-25T00:00:00Z",
-          "completedDate": null
+          "priority": "High"
         },
         {
-          "id": 3,
-          "name": "Task 3",
-          "description": "Test the application for bugs",
-          "assignedTo": "Sam Wilson",
-          "priority": "Low",
-          "status": "Completed",
-          "startDate": "2024-05-10T00:00:00Z",
-          "dueDate": "2024-05-15T00:00:00Z",
-          "completedDate": "2024-05-16T00:00:00Z"
+          "taskID": 102,
+          "taskName": "Develop Frontend",
+          "taskDescription": "Implement frontend design using HTML, CSS, and JavaScript.",
+          "assignedToTeamMemberID": 302,
+          "startDate": "2024-06-16",
+          "endDate": "2024-07-15",
+          "status": "Not Started",
+          "priority": "Medium"
         },
         {
-          "id": 4,
-          "name": "Task 4",
-          "description": "Prepare the presentation slides",
-          "assignedTo": "Emily Johnson",
-          "priority": "High",
-          "status": "To Do",
-          "startDate": "2024-05-12T00:00:00Z",
-          "dueDate": "2024-05-22T00:00:00Z",
-          "completedDate": null
-        },
-        {
-          "id": 5,
-          "name": "Task 5",
-          "description": "Organize team meeting",
-          "assignedTo": "Michael Brown",
-          "priority": "Medium",
-          "status": "In Progress",
-          "startDate": "2024-05-18T00:00:00Z",
-          "dueDate": "2024-05-28T00:00:00Z",
-          "completedDate": null
+          "taskID": 103,
+          "taskName": "Implement Backend Functionality",
+          "taskDescription": "Develop backend functionality using Python and Django framework.",
+          "assignedToTeamMemberID": 303,
+          "startDate": "2024-07-01",
+          "endDate": "2024-08-15",
+          "status": "Not Started",
+          "priority": "High"
         }
       ],
-    "users": [
-      {
-        "id": 1,
-        "name": "John Doe",
-        "role": "admin"
-      },
-      {
-        "id": 2,
-        "name": "Jane Smith",
-        "role": "manager"
-      }
-    ]
-  }
-  
-  
+      "teamMembers": [
+        {
+          "teamMemberID": 101,
+          "teamMemberName": "John Doe",
+          "email": "john.doe@example.com",
+          "designation": "Project Manager"
+        },
+        {
+          "teamMemberID": 301,
+          "teamMemberName": "Alice",
+          "email": "alice@example.com",
+          "designation": "Designer"
+        },
+        {
+          "teamMemberID": 302,
+          "teamMemberName": "Bob",
+          "email": "bob@example.com",
+          "designation": "Frontend Developer"
+        },
+        {
+          "teamMemberID": 303,
+          "teamMemberName": "Charlie",
+          "email": "charlie@example.com",
+          "designation": "Backend Developer"
+        }
+      ]
+    }
+  ]
+}

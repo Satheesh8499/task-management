@@ -1,0 +1,72 @@
+<div class="container mt-5">
+  <h2>User Management</h2>
+  
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#userModal">
+    Create New User
+  </button>
+  
+  <table class="table table-bordered mt-3">
+    <thead>
+      <tr>
+        <th>User ID</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Contact Number</th>
+        <th>Role</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users">
+        <td>{{user.id}}</td>
+        <td>{{user.name}}</td>
+        <td>{{user.email}}</td>
+        <td>{{user.contact}}</td>
+        <td>{{user.role}}</td>
+        <td>
+          <button class="btn btn-warning btn-sm me-2">Edit</button>
+          <button class="btn btn-danger btn-sm " (click)="deleteUser(user.id)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <div class="modal fade" id="userModal" tabindex="-1" aria-labelledby="userModalLabel">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="userModalLabel">Create New User</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form #userForm="ngForm">
+            <div class="mb-3">
+              <label for="userName" class="form-label">Name</label>
+              <input type="text" class="form-control" id="userName" name="name" [(ngModel)]="user.name">
+            </div>
+            <div class="mb-3">
+              <label for="userEmail" class="form-label">Email</label>
+              <input type="email" class="form-control" id="userEmail" name="email" [(ngModel)]="user.email">
+            </div>
+            <div class="mb-3">
+              <label for="userContact" class="form-label">Contact Number</label>
+              <input type="text" class="form-control" id="userContact" name="contact" [(ngModel)]="user.contact">
+            </div>
+            <div class="mb-3">
+              <label for="userRole" class="form-label">Role</label>
+              <select class="form-select" id="userRole" name="role" [(ngModel)]="user.role">
+                <option value="admin">Admin</option>
+                <option value="project-manager">Project Manager</option>
+                <option value="team-member">Team Member</option>
+              </select>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" (click)="createUser()">Submit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
