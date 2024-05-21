@@ -7,6 +7,7 @@ import { AdminHeaderComponent } from './admin-header/admin-header.component';
 import { UserManagementComponent } from './user-management/user-management.component';
 import { AdminLayoutComponent } from './admin-layout/admin-layout.component';
 import { FormsModule } from '@angular/forms';
+import { ViewProjectsComponent } from './view-projects/view-projects.component';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { FormsModule } from '@angular/forms';
     ViewTaskComponent,
     AdminHeaderComponent,
     UserManagementComponent,
-    AdminLayoutComponent
+    AdminLayoutComponent,
+    ViewProjectsComponent
   ],
   imports: [
     CommonModule,
