@@ -12,7 +12,7 @@ import { FormsModule } from '@angular/forms';
 import { TeamMemberLayoutComponent } from './team-member-layout/team-member-layout.component'; // Import FormsModule
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { NgbModalModule, NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { TeamMemberRoutingModule } from './team-member-routing.module';
 
@@ -21,31 +21,25 @@ const routes: Routes = [
   
 ];
 
-@NgModule({
-  declarations: [
-    HeaderComponent,
-    HomeComponent,
-    ProjectDetailsComponent,
-    SidebarComponent,
-    TasksComponent,
-    BootstrapDialogComponent,
-    TeamMemberLayoutComponent
+@NgModule({ declarations: [
+        HeaderComponent,
+        HomeComponent,
+        ProjectDetailsComponent,
+        SidebarComponent,
+        TasksComponent,
+        BootstrapDialogComponent,
+        TeamMemberLayoutComponent
     ],
-    imports: [
-      CommonModule,
-     TeamMemberRoutingModule,
-      HttpClientModule,
-      FormsModule,
-      NgbModule,
-      NgbModalModule,
-      CommonModule,
-    ],
-    providers: [
-      provideAnimationsAsync()
-    ],
-  exports: [
-    HeaderComponent,
-    SidebarComponent
-  ]
-})
+    exports: [
+        HeaderComponent,
+        SidebarComponent
+    ], imports: [CommonModule,
+        TeamMemberRoutingModule,
+        FormsModule,
+        NgbModule,
+        NgbModalModule,
+        CommonModule], providers: [
+        provideAnimationsAsync(),
+        provideHttpClient(withInterceptorsFromDi())
+    ] })
 export class TeamMemberModule { }
