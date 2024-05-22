@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { ViewTaskComponent } from './view-task/view-task.component';
 import { AdminLayoutComponent } from './admin-layout/admin-layout.component';
 import { UserManagementComponent } from './user-management/user-management.component';
+import { ViewProjectsComponent } from './view-projects/view-projects.component';
 
 const routes: Routes = [
   {
@@ -11,6 +12,7 @@ const routes: Routes = [
     children: [
       { path: 'view-task', component: ViewTaskComponent},
       { path: 'users', component: UserManagementComponent},
+      { path: 'view-projects', component: ViewProjectsComponent },
       { path: '', redirectTo: 'home', pathMatch: 'full' }
     ]
     
