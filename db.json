@@ -43,34 +43,9 @@
       "startDate": "2024-05-12T00:00:00Z",
       "dueDate": "2024-05-22T00:00:00Z",
       "completedDate": null
-    },
-    {
-      "id": "5",
-      "name": "Task 5",
-      "description": "Organize team meeting",
-      "assignedTo": "Michael Brown",
-      "priority": "Medium",
-      "status": "In Progress",
-      "startDate": "2024-05-18T00:00:00Z",
-      "dueDate": "2024-05-28T00:00:00Z",
-      "completedDate": null
     }
   ],
   "users": [
-    {
-      "id": "10",
-      "name": "Sophia Brown",
-      "email": "sophia.brown@example.com",
-      "contact": "+1122334455",
-      "role": "team-member"
-    },
-    {
-      "id": "12",
-      "name": "Alice White",
-      "email": "alice.white@example.com",
-      "contact": "+9876543210",
-      "role": "admin"
-    },
     {
       "id": "13",
       "name": "John Doe",
@@ -100,14 +75,13 @@
       "role": "project-manager"
     },
     {
-      "id": 0,
+      "id": "0",
       "name": "satheesh",
-      "email": "sugithisatheesh8499@gmail.com",
-      "contact": "6302569010",
+      "email": "chaitanyasugithi@gmail.com",
+      "contact": "674849",
       "role": "project-manager"
     }
   ],
-
   "projects": [
     {
       "projectID": 1,
@@ -174,7 +148,8 @@
           "email": "charlie@example.com",
           "designation": "Backend Developer"
         }
-      ]
+      ],
+      "id": "9164"
     }
   ]
 }

@@ -1,0 +1,16 @@
+.col-auto {
+    position: fixed;
+    left: 0rem;
+    width: 200px;
+    height: calc(100vh - 4rem);
+}
+
+.d-flex .nav-link {
+    color: whitesmoke;
+    font-family: Georgia;
+}
+
+.d-flex .title {
+    font-weight: bolder;
+}
+

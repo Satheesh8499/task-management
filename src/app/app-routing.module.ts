@@ -11,20 +11,20 @@ const routes: Routes = [
     canActivate: [AuthGuard],
     data: { role: 'admin' }
    },
-  // {
-  //   path: 'manager',
-  //   loadChildren: () => import('./manager/manager.module').then(m => m.ManagerModule),
-  //   canActivate: [AuthGuard],
-  //   data: { role: 'manager' }
-  // },
-  // {
-  //   path: 'team-member',
-  //   loadChildren: () => import('./features/team-member/team-member.module').then(m => m.TeamMemberModule),
-  //   canActivate: [AuthGuard],
-  //   data: { role: 'team-member' }
-  // },
-  { path: '', redirectTo: '/login', pathMatch: 'full' },
-  { path: '**', redirectTo: '/login' }
+  {
+    path: 'manager',
+    loadChildren: () => import('./project-manager/project-manager.module').then(m => m.ProjectManagerModule),
+    // canActivate: [AuthGuard],
+    data: { role: 'manager'}
+  },
+  {
+    path: 'team-member',
+    loadChildren: () => import('./team-member/team-member.module').then(m => m.TeamMemberModule),
+    //canActivate: [AuthGuard],
+    data: { role: 'team-member' }
+  },
+   { path: '', redirectTo: '/login', pathMatch: 'full' },
+  // { path: '**', redirectTo: '/login' }
 ];
 
 @NgModule({

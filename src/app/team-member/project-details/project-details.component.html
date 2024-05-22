@@ -1,0 +1,67 @@
+
+
+<div *ngIf="project" class="container mt-4">
+   <div class="card shadow-sm">
+     <div class="card-header bg-primary text-white">
+       <h3 class="mb-0">{{ project.projectName }}</h3>
+     </div>
+     <div class="card-body">
+       <table class="table table-bordered table-striped">
+         <tbody>
+           <tr>
+             <td class="font-weight-bold">Description</td>
+             <td>{{ project.projectDescription }}</td>
+           </tr>
+           <tr>
+             <td class="font-weight-bold">Start Date</td>
+             <td>{{ project.startDate | date:'longDate' }}</td>
+           </tr>
+           <tr>
+             <td class="font-weight-bold">End Date</td>
+             <td>{{ project.endDate | date:'longDate' }}</td>
+           </tr>
+           <tr>
+             <td class="font-weight-bold">Tasks</td>
+             <td><a routerLink="/tasks" routerLinkActive="active">View Tasks</a></td>
+           </tr>
+           <tr>
+             <td class="font-weight-bold">Status</td>
+             <td>{{ project.status }}</td>
+           </tr>
+         </tbody>
+       </table>
+     </div>
+   </div><br>
+   <button (click)="toggleData()" class="toggle-button">{{ showData ? 'Team Members' : 'View Team Members' }}</button>
+  <ul *ngIf="showData">
+    
+     <table class="member-table">
+       <thead>
+         <tr>
+           <th>Name</th>
+           <th>Designation</th>
+           <th>Email</th>
+         </tr>
+       </thead>
+       
+       <tbody>
+         <tr *ngFor="let member of project.teamMembers">
+           <td>{{ member.teamMemberName }}</td>
+           <td>{{ member.designation }}</td>
+           <td>{{ member.email }}</td>
+         </tr>
+       </tbody>
+     </table>
+      
+  </ul>
+
+  <!-- <h3>Tasks</h3> -->
+ <!-- <div>
+  <nav>
+   <ul>
+     <li><a routerLink="/tasks" routerLinkActive="active">View Tasks</a></li>
+   </ul>
+  </nav>
+ </div> -->
+ </div>
+ 

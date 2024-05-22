@@ -20,6 +20,7 @@ export class AuthService {
       this.router.navigate(['/manager']);
       return true;
     } else if (username === 'team' && password === 'team') {
+       console.log("team");
       this.currentUser = { username: 'team', role: 'team-member' };
       this.router.navigate(['/team-member']);
       return true;

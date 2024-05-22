@@ -4,16 +4,18 @@ import { ViewTaskComponent } from './view-task/view-task.component';
 import { AdminLayoutComponent } from './admin-layout/admin-layout.component';
 import { UserManagementComponent } from './user-management/user-management.component';
 import { ViewProjectsComponent } from './view-projects/view-projects.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 const routes: Routes = [
   {
     path: '',
     component: AdminLayoutComponent,
     children: [
+      {path:'dashboard',component:DashboardComponent},
       { path: 'view-task', component: ViewTaskComponent},
       { path: 'users', component: UserManagementComponent},
       { path: 'view-projects', component: ViewProjectsComponent },
-      { path: '', redirectTo: 'home', pathMatch: 'full' }
+      { path: '', redirectTo: 'dashboard', pathMatch: 'full' }
     ]
     
   }
